@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F28AC1528B65F3418EB8178B /* Pods_LetsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0001A885DAD2CC7853A6546A /* Pods_LetsSwift.framework */; };
 		F900A2AE1EA80D0F000BFED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F900A2AD1EA80D0F000BFED6 /* AppDelegate.swift */; };
 		F900A2B01EA80D0F000BFED6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F900A2AF1EA80D0F000BFED6 /* FirstViewController.swift */; };
 		F900A2B21EA80D0F000BFED6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F900A2B11EA80D0F000BFED6 /* SecondViewController.swift */; };
 		F900A2B51EA80D0F000BFED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F900A2B31EA80D0F000BFED6 /* Main.storyboard */; };
 		F900A2B71EA80D0F000BFED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F900A2B61EA80D0F000BFED6 /* Assets.xcassets */; };
 		F900A2BA1EA80D0F000BFED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F900A2B81EA80D0F000BFED6 /* LaunchScreen.storyboard */; };
+		F9C9DE311EA957FC0017E89C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE301EA957FC0017E89C /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0001A885DAD2CC7853A6546A /* Pods_LetsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B800E01045D94E3DA1B490 /* Pods-LetsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LetsSwift/Pods-LetsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		F900A2AA1EA80D0E000BFED6 /* LetsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F900A2AD1EA80D0F000BFED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F900A2AF1EA80D0F000BFED6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		F900A2B61EA80D0F000BFED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F900A2B91EA80D0F000BFED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F900A2BB1EA80D0F000BFED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C9DE301EA957FC0017E89C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		FC69F1A6F6FD090A90468BFB /* Pods-LetsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LetsSwift/Pods-LetsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28AC1528B65F3418EB8178B /* Pods_LetsSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33C1357981D8E0794D083814 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC69F1A6F6FD090A90468BFB /* Pods-LetsSwift.debug.xcconfig */,
+				B4B800E01045D94E3DA1B490 /* Pods-LetsSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64BC059BA3FCA0A8250BDD42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0001A885DAD2CC7853A6546A /* Pods_LetsSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F900A2A11EA80D0E000BFED6 = {
 			isa = PBXGroup;
 			children = (
 				F900A2AC1EA80D0E000BFED6 /* LetsSwift */,
 				F900A2AB1EA80D0E000BFED6 /* Products */,
+				33C1357981D8E0794D083814 /* Pods */,
+				64BC059BA3FCA0A8250BDD42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +89,7 @@
 				F900A2B61EA80D0F000BFED6 /* Assets.xcassets */,
 				F900A2B81EA80D0F000BFED6 /* LaunchScreen.storyboard */,
 				F900A2BB1EA80D0F000BFED6 /* Info.plist */,
+				F9C9DE301EA957FC0017E89C /* DataModel.swift */,
 			);
 			path = LetsSwift;
 			sourceTree = "<group>";
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F900A2BE1EA80D0F000BFED6 /* Build configuration list for PBXNativeTarget "LetsSwift" */;
 			buildPhases = (
+				052B0CFFB6DEFD32DBD15051 /* [CP] Check Pods Manifest.lock */,
 				F900A2A61EA80D0E000BFED6 /* Sources */,
 				F900A2A71EA80D0E000BFED6 /* Frameworks */,
 				F900A2A81EA80D0E000BFED6 /* Resources */,
+				F1B4649CCDCC3232EF6A4F36 /* [CP] Embed Pods Frameworks */,
+				44512264A0A15A79BEF7FA66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,12 +164,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		052B0CFFB6DEFD32DBD15051 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44512264A0A15A79BEF7FA66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsSwift/Pods-LetsSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1B4649CCDCC3232EF6A4F36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsSwift/Pods-LetsSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F900A2A61EA80D0E000BFED6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F900A2B21EA80D0F000BFED6 /* SecondViewController.swift in Sources */,
+				F9C9DE311EA957FC0017E89C /* DataModel.swift in Sources */,
 				F900A2AE1EA80D0F000BFED6 /* AppDelegate.swift in Sources */,
 				F900A2B01EA80D0F000BFED6 /* FirstViewController.swift in Sources */,
 			);
@@ -264,6 +343,7 @@
 		};
 		F900A2BF1EA80D0F000BFED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC69F1A6F6FD090A90468BFB /* Pods-LetsSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LetsSwift/Info.plist;
@@ -276,6 +356,7 @@
 		};
 		F900A2C01EA80D0F000BFED6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4B800E01045D94E3DA1B490 /* Pods-LetsSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LetsSwift/Info.plist;
@@ -305,6 +386,7 @@
 				F900A2C01EA80D0F000BFED6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

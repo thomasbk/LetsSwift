@@ -8,7 +8,11 @@
 
 import UIKit
 
+import Alamofire
+
 class SecondViewController: UIViewController {
+    
+    var weather = DataModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +21,27 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func buttonClicked(_ sender: UIButton) {
-        print("This is a Git tutorial")
+        print("Started downloading")
+        weather.downloadData {
+            self.updateUI()
+        }
     }
     
+    @IBAction func testClick(_ sender: UIButton) {
+        print("Click working!")
+    }
+    
+    
+    func updateUI() {
+        
+        
+        print("finished downloading")
+        //dateLabel.text = weather.date
+        //tempLabel.text = "\(weather.temp)"
+        //locationLabel.text = weather.location
+        //weatherLabel.text = weather.weather
+        //weatherImage.image = UIImage(named: weather.weather)
+    }
     
 
     override func didReceiveMemoryWarning() {

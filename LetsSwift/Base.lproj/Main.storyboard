@@ -75,11 +75,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYF-Zb-lBQ">
-                                <rect key="frame" x="134" y="192" width="108" height="44"/>
+                                <rect key="frame" x="133" y="102" width="108" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Print button"/>
                                 <connections>
                                     <action selector="buttonClicked:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="qNH-4I-tZE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dn-JO-wFb">
+                                <rect key="frame" x="133" y="227" width="108" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test Click"/>
+                                <connections>
+                                    <action selector="testClick:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XwY-gg-xUO"/>
                                 </connections>
                             </button>
                         </subviews>
