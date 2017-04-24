@@ -7,5 +7,6 @@ target 'LetsSwift' do
 
 # Pods for LetsSwift
 pod 'Alamofire', '~> 4.2.0'
+pod 'AlamofireImage', '~> 3.1'
 
 end

@@ -15,6 +15,12 @@
 		F900A2B71EA80D0F000BFED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F900A2B61EA80D0F000BFED6 /* Assets.xcassets */; };
 		F900A2BA1EA80D0F000BFED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F900A2B81EA80D0F000BFED6 /* LaunchScreen.storyboard */; };
 		F9C9DE311EA957FC0017E89C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE301EA957FC0017E89C /* DataModel.swift */; };
+		F9C9DE331EAAC4B00017E89C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE321EAAC4B00017E89C /* ThirdViewController.swift */; };
+		F9C9DE351EAAD8F20017E89C /* Smiley_Face.png in Resources */ = {isa = PBXBuildFile; fileRef = F9C9DE341EAAD8F20017E89C /* Smiley_Face.png */; };
+		F9C9DE371EAADDDC0017E89C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE361EAADDDC0017E89C /* CustomCell.swift */; };
+		F9C9DE3B1EAE6EA90017E89C /* GraphicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE3A1EAE6EA90017E89C /* GraphicsViewController.swift */; };
+		F9C9DE3E1EAE72690017E89C /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE3D1EAE72690017E89C /* PushButtonView.swift */; };
+		F9C9DE401EAE868B0017E89C /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE3F1EAE868B0017E89C /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,12 @@
 		F900A2B91EA80D0F000BFED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F900A2BB1EA80D0F000BFED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9C9DE301EA957FC0017E89C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		F9C9DE321EAAC4B00017E89C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		F9C9DE341EAAD8F20017E89C /* Smiley_Face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smiley_Face.png; sourceTree = "<group>"; };
+		F9C9DE361EAADDDC0017E89C /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		F9C9DE3A1EAE6EA90017E89C /* GraphicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicsViewController.swift; sourceTree = "<group>"; };
+		F9C9DE3D1EAE72690017E89C /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushButtonView.swift; path = Views/PushButtonView.swift; sourceTree = "<group>"; };
+		F9C9DE3F1EAE868B0017E89C /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CounterView.swift; path = Views/CounterView.swift; sourceTree = "<group>"; };
 		FC69F1A6F6FD090A90468BFB /* Pods-LetsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LetsSwift/Pods-LetsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,13 +97,27 @@
 				F900A2AD1EA80D0F000BFED6 /* AppDelegate.swift */,
 				F900A2AF1EA80D0F000BFED6 /* FirstViewController.swift */,
 				F900A2B11EA80D0F000BFED6 /* SecondViewController.swift */,
+				F9C9DE321EAAC4B00017E89C /* ThirdViewController.swift */,
+				F9C9DE3A1EAE6EA90017E89C /* GraphicsViewController.swift */,
 				F900A2B31EA80D0F000BFED6 /* Main.storyboard */,
 				F900A2B61EA80D0F000BFED6 /* Assets.xcassets */,
 				F900A2B81EA80D0F000BFED6 /* LaunchScreen.storyboard */,
 				F900A2BB1EA80D0F000BFED6 /* Info.plist */,
 				F9C9DE301EA957FC0017E89C /* DataModel.swift */,
+				F9C9DE3C1EAE72250017E89C /* Views */,
+				F9C9DE341EAAD8F20017E89C /* Smiley_Face.png */,
+				F9C9DE361EAADDDC0017E89C /* CustomCell.swift */,
 			);
 			path = LetsSwift;
+			sourceTree = "<group>";
+		};
+		F9C9DE3C1EAE72250017E89C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F9C9DE3D1EAE72690017E89C /* PushButtonView.swift */,
+				F9C9DE3F1EAE868B0017E89C /* CounterView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +185,7 @@
 				F900A2BA1EA80D0F000BFED6 /* LaunchScreen.storyboard in Resources */,
 				F900A2B71EA80D0F000BFED6 /* Assets.xcassets in Resources */,
 				F900A2B51EA80D0F000BFED6 /* Main.storyboard in Resources */,
+				F9C9DE351EAAD8F20017E89C /* Smiley_Face.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +246,13 @@
 			files = (
 				F900A2B21EA80D0F000BFED6 /* SecondViewController.swift in Sources */,
 				F9C9DE311EA957FC0017E89C /* DataModel.swift in Sources */,
+				F9C9DE331EAAC4B00017E89C /* ThirdViewController.swift in Sources */,
+				F9C9DE371EAADDDC0017E89C /* CustomCell.swift in Sources */,
+				F9C9DE3B1EAE6EA90017E89C /* GraphicsViewController.swift in Sources */,
 				F900A2AE1EA80D0F000BFED6 /* AppDelegate.swift in Sources */,
+				F9C9DE3E1EAE72690017E89C /* PushButtonView.swift in Sources */,
 				F900A2B01EA80D0F000BFED6 /* FirstViewController.swift in Sources */,
+				F9C9DE401EAE868B0017E89C /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
