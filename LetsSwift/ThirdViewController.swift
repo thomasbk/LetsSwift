@@ -13,6 +13,9 @@ import AlamofireImage
 class ThirdViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView?
+        
+    var weather = DataModel()
+
     
     let cellIdentifier = "CellIdentifier"
     
@@ -22,15 +25,31 @@ class ThirdViewController: UIViewController,UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
+    
         print("Loaded third view")
+        
+        print("Started downloading")
+        weather.downloadData {
+            self.updateUI()
+        }
+        
+        
         
         fruits = ["Apple", "Pineapple", "Orange", "Blackberry", "Banana", "Pear", "Kiwi", "Strawberry", "Mango", "Walnut", "Apricot", "Tomato", "Almond", "Date", "Melon", "Water Melon", "Lemon", "Coconut", "Fig", "Passionfruit", "Star Fruit", "Clementin", "Citron", "Cherry", "Cranberry"]
 
     }
     
     
+    func updateUI() {
+        
+        print("finished downloading")
+        //dateLabel.text = weather.date
+        //tempLabel.text = "\(weather.temp)"
+        //locationLabel.text = weather.location
+        //weatherLabel.text = weather.weather
+        //weatherImage.image = UIImage(named: weather.weather)
+        
+    }
     
     
     

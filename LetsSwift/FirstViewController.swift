@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import User
 
 class FirstViewController: UIViewController {
 
@@ -16,13 +17,23 @@ class FirstViewController: UIViewController {
         
         
         print("Loaded first view")
+        
+        
+        let myUser = User.sharedInstance
+        
+        myUser.userID = 3
+        myUser.firstName = "Thomas"
+        myUser.lastName = "Baltodano"
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
 
