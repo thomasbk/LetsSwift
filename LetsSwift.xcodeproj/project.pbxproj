@@ -28,6 +28,9 @@
 		F9C9DE6C1EBE2FD00017E89C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE6B1EBE2FD00017E89C /* CameraViewController.swift */; };
 		F9C9DE6F1EBE36F20017E89C /* DSCameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE6E1EBE36F20017E89C /* DSCameraHandler.swift */; };
 		F9C9DE711EC62F0B0017E89C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE701EC62F0A0017E89C /* User.swift */; };
+		F9C9DE731EC658800017E89C /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE721EC658800017E89C /* ResumeViewController.swift */; };
+		F9C9DE751EC65C050017E89C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE741EC65C050017E89C /* InfoViewController.swift */; };
+		F9C9DE771ECA2EC00017E89C /* CoreAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE761ECA2EBF0017E89C /* CoreAnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		F9C9DE6B1EBE2FD00017E89C /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		F9C9DE6E1EBE36F20017E89C /* DSCameraHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DSCameraHandler.swift; path = Helpers/DSCameraHandler.swift; sourceTree = "<group>"; };
 		F9C9DE701EC62F0A0017E89C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Views/User.swift; sourceTree = "<group>"; };
+		F9C9DE721EC658800017E89C /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		F9C9DE741EC65C050017E89C /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F9C9DE761ECA2EBF0017E89C /* CoreAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimationViewController.swift; sourceTree = "<group>"; };
 		FC69F1A6F6FD090A90468BFB /* Pods-LetsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LetsSwift/Pods-LetsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,8 +119,11 @@
 				F900A2B11EA80D0F000BFED6 /* MapsViewController.swift */,
 				F9C9DE321EAAC4B00017E89C /* ThirdViewController.swift */,
 				F9C9DE3A1EAE6EA90017E89C /* GraphicsViewController.swift */,
+				F9C9DE761ECA2EBF0017E89C /* CoreAnimationViewController.swift */,
 				F9C9DE661EAFF9260017E89C /* CoreDataViewController.swift */,
 				F9C9DE6B1EBE2FD00017E89C /* CameraViewController.swift */,
+				F9C9DE741EC65C050017E89C /* InfoViewController.swift */,
+				F9C9DE721EC658800017E89C /* ResumeViewController.swift */,
 				F900A2B31EA80D0F000BFED6 /* Main.storyboard */,
 				F900A2B61EA80D0F000BFED6 /* Assets.xcassets */,
 				F900A2B81EA80D0F000BFED6 /* LaunchScreen.storyboard */,
@@ -286,6 +295,7 @@
 				F9C9DE311EA957FC0017E89C /* DataModel.swift in Sources */,
 				F9C9DE331EAAC4B00017E89C /* ThirdViewController.swift in Sources */,
 				F9C9DE371EAADDDC0017E89C /* CustomCell.swift in Sources */,
+				F9C9DE751EC65C050017E89C /* InfoViewController.swift in Sources */,
 				F9C9DE711EC62F0B0017E89C /* User.swift in Sources */,
 				F9C9DE6A1EBBCACA0017E89C /* Places.swift in Sources */,
 				F9C9DE3B1EAE6EA90017E89C /* GraphicsViewController.swift in Sources */,
@@ -296,8 +306,10 @@
 				F9C9DE671EAFF9260017E89C /* CoreDataViewController.swift in Sources */,
 				F9C9DE6F1EBE36F20017E89C /* DSCameraHandler.swift in Sources */,
 				F9C9DE6C1EBE2FD00017E89C /* CameraViewController.swift in Sources */,
+				F9C9DE771ECA2EC00017E89C /* CoreAnimationViewController.swift in Sources */,
 				F900A2B01EA80D0F000BFED6 /* FirstViewController.swift in Sources */,
 				F9C9DE401EAE868B0017E89C /* CounterView.swift in Sources */,
+				F9C9DE731EC658800017E89C /* ResumeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

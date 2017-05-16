@@ -11,14 +11,15 @@ import UIKit
 import MapKit
 
 
-class MapsViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
+class MapsViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet var mapView: MKMapView!
-    
     
     var places = Places()
     
     let locationManager = CLLocationManager()
+    
+    var userLocation:CLLocationCoordinate2D!
     
 
     override func viewDidLoad() {
@@ -45,22 +46,54 @@ class MapsViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
             locationManager.startUpdatingLocation()
         }
         
+        
+        // Set gesture recognizer to add a pin on touch
+        
+        // Double tap
+//        let singleTap = UITapGestureRecognizer(target: self, action:#selector(MapsViewController.handleSingleTap(gestureReconizer:)))
+//        singleTap.numberOfTapsRequired = 1
+//        singleTap.delegate = self
+//        mapView.addGestureRecognizer(singleTap)
+//        
+//        let doubleTap = UITapGestureRecognizer(target: self, action:#selector(MapsViewController.handleTap(gestureReconizer:)))
+//        doubleTap.numberOfTapsRequired = 2
+//        doubleTap.delegate = self
+//        mapView.addGestureRecognizer(doubleTap)
+//        
+//        singleTap.require(toFail: doubleTap)
+        
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(MapsViewController.handleTap(gestureReconizer:)))
+        gestureRecognizer.delegate = self
+        mapView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    
+    // Add a pin where the touch happened
+    func handleSingleTap(gestureReconizer: UILongPressGestureRecognizer) {
+    
+    }
+    
+    // Add a pin where the touch happened
+    func handleTap(gestureReconizer: UILongPressGestureRecognizer) {
+        
+        if (gestureReconizer.state == UIGestureRecognizerState.began) {
+            let location = gestureReconizer.location(in: mapView)
+            let coordinate = mapView.convert(location,toCoordinateFrom: mapView)
+        
+            // Add annotation:
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            
+            annotation.title = "User location"
+            annotation.subtitle = "\(coordinate.latitude),\(coordinate.longitude)"
+            mapView.addAnnotation(annotation)
+        }
     }
     
     
     
     
     func updateUI() {
-        
-        print("finished downloading")
-        
-        // Set map region
-        //            let latDelta:CLLocationDegrees = 0.01
-        //            let longDelta:CLLocationDegrees = 0.01
-        //            let theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        //            let pointLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(Double(place["latitude"] as! String)!, Double(place["longitude"] as! String)!)
-        //            let region:MKCoordinateRegion = MKCoordinateRegionMake(pointLocation, theSpan)
-        //            mapView.setRegion(region, animated: true)
         
         for place in places.placesArray {
             
@@ -103,11 +136,15 @@ class MapsViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
             //performSegueWithIdentifier("NextScene", sender: self)
             
             
-            
             let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             optionMenu.popoverPresentationController?.sourceView = self.view
             
-            let takePhoto = UIAlertAction(title: "Waze", style: .default) { action -> Void in
+            
+            let showRoute = UIAlertAction(title: "Show route", style: .default) { action -> Void in
+                
+                self.showRoute(destinationLocation: self.selectedAnnotation.coordinate)
+            }
+            let showWaze = UIAlertAction(title: "Waze", style: .default) { action -> Void in
                 
                 let wazeHooks = "waze://?ll=\(self.selectedAnnotation.subtitle!))&navigate=yes"
                 
@@ -121,7 +158,7 @@ class MapsViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
                 
                 
             }
-            let sharePhoto = UIAlertAction(title: "Google Maps", style: .default) { (alert : UIAlertAction!) in
+            let showGoogle = UIAlertAction(title: "Google Maps", style: .default) { (alert : UIAlertAction!) in
                 
                 let googleHooks = "comgooglemaps://?q=\(self.selectedAnnotation.subtitle!)"
                 let googleUrl = NSURL(string: googleHooks)!
@@ -134,8 +171,9 @@ class MapsViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alert : UIAlertAction!) in
             }
-            optionMenu.addAction(takePhoto)
-            optionMenu.addAction(sharePhoto)
+            optionMenu.addAction(showRoute)
+            optionMenu.addAction(showWaze)
+            optionMenu.addAction(showGoogle)
             optionMenu.addAction(cancelAction)
             self.present(optionMenu, animated: true, completion: nil)
             
@@ -144,27 +182,109 @@ class MapsViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
     }
     
     
+    // Show a route between 2 points
     
+    func showRoute (destinationLocation: CLLocationCoordinate2D) {
+        //let sourceLocation = CLLocationCoordinate2D(latitude: 40.759011, longitude: -73.984472)
+        //let destinationLocation = CLLocationCoordinate2D(latitude: 40.748441, longitude: -73.985564)
+        
+        // 3.
+        let sourcePlacemark = MKPlacemark(coordinate: userLocation, addressDictionary: nil)
+        let destinationPlacemark = MKPlacemark(coordinate: destinationLocation, addressDictionary: nil)
+        
+        // 4.
+        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+
+// 
+//        // 5.
+//        let sourceAnnotation = MKPointAnnotation()
+//        sourceAnnotation.title = "Times Square"
+//        
+//        if let location = sourcePlacemark.location {
+//            sourceAnnotation.coordinate = location.coordinate
+//        }
+//        
+//        
+//        let destinationAnnotation = MKPointAnnotation()
+//        destinationAnnotation.title = "Empire State Building"
+//        
+//        if let location = destinationPlacemark.location {
+//            destinationAnnotation.coordinate = location.coordinate
+//        }
+//        
+//        // 6.
+//        self.mapView.showAnnotations([sourceAnnotation,destinationAnnotation], animated: true )
+//        
+        // 7.
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = sourceMapItem
+        directionRequest.destination = destinationMapItem
+        directionRequest.transportType = .automobile
+        
+        // Calculate the direction
+        let directions = MKDirections(request: directionRequest)
+        
+        // 8.
+        directions.calculate {
+            (response, error) -> Void in
+            
+            guard let response = response else {
+                if let error = error {
+                    
+                    let alert = UIAlertController(title: "Alert", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    print("Error: \(error)")
+                }
+                
+                return
+            }
+            
+            let route = response.routes[0]
+            self.mapView.add((route.polyline), level: MKOverlayLevel.aboveRoads)
+            
+            let rect = route.polyline.boundingMapRect
+            self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
+        }
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.red
+        renderer.lineWidth = 4.0
+        
+        return renderer
+    }
+    
+    
+    
+    
+    // Set user location
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
         
+        //let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        userLocation = manager.location!.coordinate
+        
+        print("locations = \(userLocation.latitude) \(userLocation.longitude)")
         
         
         // set initial location
-        let initialLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
+        let initialLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
         
         centerMapOnLocation(location: initialLocation)
         
         locationManager.stopUpdatingLocation()
         
         // Set a pin near the location
-        let pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(locValue.latitude + 0.01, locValue.longitude + 0.01)
+        let pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(userLocation.latitude + 0.01, userLocation.longitude + 0.01)
         let objectAnnotation = MKPointAnnotation()
         objectAnnotation.coordinate = pinLocation
         objectAnnotation.title = "Place near me"
-        objectAnnotation.subtitle = "\(locValue.latitude + 0.01),\(locValue.longitude + 0.01)"
+        objectAnnotation.subtitle = "\(userLocation.latitude + 0.01),\(userLocation.longitude + 0.01)"
         self.mapView.addAnnotation(objectAnnotation)
         
     }

@@ -8,7 +8,8 @@
 
 import UIKit
 
-@IBDesignable class GraphView: UIView {
+//@IBDesignable class GraphView: UIView {
+class GraphView: UIView {
     
     //Weekly sample data
     var graphPoints:[Int] = [4, 2, 6, 4, 5, 8, 3]
@@ -55,7 +56,7 @@ import UIKit
         //calculate the x point
         
         let margin:CGFloat = 20.0
-        var columnXPoint = { (column:Int) -> CGFloat in
+        let columnXPoint = { (column:Int) -> CGFloat in
             //Calculate gap between points
             let spacer = (width - margin*2 - 4) /
                 CGFloat((self.graphPoints.count - 1))

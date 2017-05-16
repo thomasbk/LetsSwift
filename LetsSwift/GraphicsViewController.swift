@@ -87,7 +87,7 @@ class GraphicsViewController: UIViewController {
         
         //Use 7 days for graph - can use any number,
         //but labels and sample data are set up for 7 days
-        let noOfDays:Int = 7
+        //et noOfDays:Int = 7
         
         //1 - replace last day with today's actual data
         graphView.graphPoints[graphView.graphPoints.count-1] = counterView.counter
@@ -98,8 +98,8 @@ class GraphicsViewController: UIViewController {
         //maxLabel.text = "\(graphView.graphPoints.max()!)"
         
         //3 - calculate average from graphPoints
-        let average = graphView.graphPoints.reduce(0, +)
-            / graphView.graphPoints.count
+        //let average = graphView.graphPoints.reduce(0, +)
+         //   / graphView.graphPoints.count
         //averageWaterDrunk.text = "\(average)"
         
         //set up labels

@@ -18,7 +18,12 @@ class User {
     public var firstName: String?
     public var lastName: String?
     public var birthDay: Date?
+    
     public var pictureURL: String?
+    public var link: String?
+    public var cellPhone: String?
+    public var homePhone: String?
+    public var email: String?
     
     
     private init() {

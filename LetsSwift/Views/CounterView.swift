@@ -10,7 +10,8 @@ import UIKit
 
 
 
-@IBDesignable class CounterView: UIView {
+//@IBDesignable class CounterView: UIView {
+class CounterView: UIView {
     
     let NoOfGlasses = 8
     let π:CGFloat = CGFloat(Double.pi)
@@ -104,7 +105,7 @@ import UIKit
         let markerSize:CGFloat = 10.0
         
         //2 - the marker rectangle positioned at the top left
-        var markerPath = UIBezierPath(rect:
+        let markerPath = UIBezierPath(rect:
             CGRect(x: -markerWidth/2,
                    y: 0,
                    width: markerWidth,
