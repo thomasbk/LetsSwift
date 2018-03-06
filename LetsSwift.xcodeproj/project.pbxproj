@@ -14,6 +14,7 @@
 		F900A2B51EA80D0F000BFED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F900A2B31EA80D0F000BFED6 /* Main.storyboard */; };
 		F900A2B71EA80D0F000BFED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F900A2B61EA80D0F000BFED6 /* Assets.xcassets */; };
 		F900A2BA1EA80D0F000BFED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F900A2B81EA80D0F000BFED6 /* LaunchScreen.storyboard */; };
+		F9C4C6D51F190E86002AD182 /* NSURLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4C6D41F190E86002AD182 /* NSURLSessionViewController.swift */; };
 		F9C9DE311EA957FC0017E89C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE301EA957FC0017E89C /* DataModel.swift */; };
 		F9C9DE331EAAC4B00017E89C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9DE321EAAC4B00017E89C /* ThirdViewController.swift */; };
 		F9C9DE351EAAD8F20017E89C /* Smiley_Face.png in Resources */ = {isa = PBXBuildFile; fileRef = F9C9DE341EAAD8F20017E89C /* Smiley_Face.png */; };
@@ -44,6 +45,7 @@
 		F900A2B61EA80D0F000BFED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F900A2B91EA80D0F000BFED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F900A2BB1EA80D0F000BFED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C4C6D41F190E86002AD182 /* NSURLSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLSessionViewController.swift; sourceTree = "<group>"; };
 		F9C9DE301EA957FC0017E89C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F9C9DE321EAAC4B00017E89C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		F9C9DE341EAAD8F20017E89C /* Smiley_Face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smiley_Face.png; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				F9C9DE6B1EBE2FD00017E89C /* CameraViewController.swift */,
 				F9C9DE741EC65C050017E89C /* InfoViewController.swift */,
 				F9C9DE721EC658800017E89C /* ResumeViewController.swift */,
+				F9C4C6D41F190E86002AD182 /* NSURLSessionViewController.swift */,
 				F900A2B31EA80D0F000BFED6 /* Main.storyboard */,
 				F900A2B61EA80D0F000BFED6 /* Assets.xcassets */,
 				F900A2B81EA80D0F000BFED6 /* LaunchScreen.storyboard */,
@@ -299,6 +302,7 @@
 				F9C9DE711EC62F0B0017E89C /* User.swift in Sources */,
 				F9C9DE6A1EBBCACA0017E89C /* Places.swift in Sources */,
 				F9C9DE3B1EAE6EA90017E89C /* GraphicsViewController.swift in Sources */,
+				F9C4C6D51F190E86002AD182 /* NSURLSessionViewController.swift in Sources */,
 				F9C9DE421EAEB39B0017E89C /* GraphView.swift in Sources */,
 				F9C9DE651EAFF5FA0017E89C /* LetsSwift.xcdatamodel in Sources */,
 				F900A2AE1EA80D0F000BFED6 /* AppDelegate.swift in Sources */,
